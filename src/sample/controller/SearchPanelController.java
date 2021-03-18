@@ -89,5 +89,6 @@ public class SearchPanelController {
         quanCol.setCellValueFactory(new PropertyValueFactory<>("quanty"));
         phoneCol.setCellValueFactory(new PropertyValueFactory<>("phone"));
         tableView.setItems(observableList);
+        tableView.setPlaceholder(new Label(""));
     }
 }

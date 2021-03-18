@@ -3,15 +3,19 @@ package sample.program;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import sample.exception.DaoException;
+import sample.models.Order;
 import sample.services.OrderService;
 import sample.util.Date;
 
+import java.util.List;
+
 public class UpdateTableView
 {
-    public static void updateData(OrderService orderService){
-        Data.getData().removeAll();
+    public synchronized static void updateData(OrderService orderService){
         try {
-            Data.getData().getList().addAll(orderService.showOrdersByDate(Date.newInstance().getDate()));
+            List<Order> orderList = orderService.showOrdersByDate(Date.newInstance().getDate());
+            Data.getData().removeAll();
+            Data.getData().getList().addAll(orderList);
         } catch (DaoException e) {
             e.printStackTrace();
             System.err.println("Ошибка добавления !");

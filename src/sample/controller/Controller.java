@@ -25,14 +25,16 @@ import sample.program.UpdateTableView;
 import sample.services.OrderService;
 import sample.services.OrderServiceImpl;
 import sample.util.Date;
+import sample.util.Timer;
 
 import java.io.IOException;
 
 public class Controller {
 
+    private final long DELAY = 10000;
     private final OrderService orderService = OrderServiceImpl.getService();
     private final ObservableList<Order> list = Data.getData().getList();
-
+    private final Thread threadTimer = new Thread(new Timer(orderService, DELAY));
     private static Order selectedOrder;
 
 
@@ -156,6 +158,8 @@ public class Controller {
 
 
         mainTableView.setItems(list);
+        mainTableView.setPlaceholder(new Label(""));
+
 
         //События кнопки Добавить
         addButton.setOnAction(actionEvent -> {
@@ -258,6 +262,9 @@ public class Controller {
                 }
             }
         });
+
+        threadTimer.start();
+
     }
 
     public synchronized static Order getSelectedOrder(){

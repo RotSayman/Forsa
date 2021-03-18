@@ -18,6 +18,7 @@ public class Main extends Application{
     private static final int WIN_WIDTH = 850;
     private static final int WIN_HEIGHT = 650;
     private static final String TITLE = "Forsa";
+    public static boolean isRun = false;
 
     private OrderService orderService = OrderServiceImpl.getService();;
 
@@ -33,6 +34,7 @@ public class Main extends Application{
     @Override
     public void init() throws Exception {
         try {
+            isRun = true;
             orderService.createTable();
             UpdateTableView.updateData(orderService);
         } catch (DaoException e) {
@@ -46,11 +48,14 @@ public class Main extends Application{
         }
     }
 
-
+    @Override
+    public void stop() throws Exception {
+        isRun = false;
+    }
 
     public static void main(String[] args) {
         launch(args);
     }
 
-
+    
 }
