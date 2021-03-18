@@ -3,7 +3,9 @@ Order for shop auto parts
 
 Inistall:
 1. Read LICENSE 
-2. Download Forsa.rar https://github.com/RotSayman/Forsa/raw/main/Forsa.rar // LINK ON DOWNLOAD
+2. Download Forsa.rar https://github.com/RotSayman/Forsa/raw/main/ForsaWin64.rar /for Windows
+2. Download Forsa.rar https://github.com/RotSayman/Forsa/raw/main/ForsaMac64.rar /for Windows
+2. Download Forsa.rar https://github.com/RotSayman/Forsa/raw/main/ForsaLinux64.rar /for Windows
 3. Unpack archive
 4. Open in the archiver Forsa.jar
 5. Change the database settings in the dao.properties file
