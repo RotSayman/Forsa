@@ -116,7 +116,7 @@ public class OrderDaoImpl implements OrderDao {
         List<Order> orderList = new LinkedList<>();
         try(Connection conn = ConnectorBase.getConnection();
             PreparedStatement prep = conn.prepareStatement(SQLOrder.SEARCH)) {
-            prep.setString(1, art);
+            prep.setString(1, art.toUpperCase());
             ResultSet result = prep.executeQuery();
             while (result.next()){
                 Order order = new Order();

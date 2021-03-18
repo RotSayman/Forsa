@@ -28,7 +28,7 @@ public class SQLOrder
 
     public static final String SELECT = "SELECT * FROM " + TABLE_NAME + " WHERE order_list_id = ?";
 
-    public static final String SEARCH = "SELECT * FROM " + TABLE_NAME + " WHERE articul = ?";
+    public static final String SEARCH = "SELECT * FROM " + TABLE_NAME + " WHERE UPPER(articul) = ?";
 
 
 
