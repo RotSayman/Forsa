@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="424.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.EditPanelController">
+<AnchorPane prefHeight="400.0" prefWidth="424.0" style="-fx-background-color: #6EB4F5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.EditPanelController">
    <children>
       <Group AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
          <children>
             <Group>
                <children>
-                  <TextField fx:id="priceField" layoutX="123.0" layoutY="64.0" prefHeight="22.0" prefWidth="287.0" />
-                  <Label layoutX="14.0" layoutY="64.0" prefHeight="22.0" prefWidth="83.0" text="Цена (0.00)">
+                  <TextField fx:id="priceField" layoutX="123.0" layoutY="64.0" prefHeight="22.0" prefWidth="287.0">
+                     <effect>
+                        <DropShadow color="#6a396f" />
+                     </effect></TextField>
+                  <Label layoutX="14.0" layoutY="64.0" prefHeight="22.0" prefWidth="83.0" text="Цена (0.00)" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -22,48 +26,60 @@
             </Group>
             <Group>
                <children>
-                  <Label layoutX="14.0" layoutY="189.0" prefHeight="22.0" prefWidth="83.0" text="Примечание">
+                  <Label layoutX="14.0" layoutY="189.0" prefHeight="22.0" prefWidth="83.0" text="Примечание" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <TextArea fx:id="descripField" layoutX="123.0" layoutY="189.0" prefHeight="199.0" prefWidth="287.0" />
+                  <TextArea fx:id="descripField" layoutX="123.0" layoutY="189.0" prefHeight="199.0" prefWidth="287.0">
+                     <effect>
+                        <DropShadow color="#6a396f" />
+                     </effect></TextArea>
                </children>
             </Group>
             <Group>
                <children>
-                  <Button fx:id="addButton" layoutX="14.0" layoutY="278.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="67.0" text="Изменить" />
-                  <Button fx:id="cancelButton" layoutX="14.0" layoutY="319.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="67.0" text="Отменить" />
+                  <Button fx:id="addButton" layoutX="14.0" layoutY="278.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="82.0" style="-fx-background-color: #0088D1;" text="Изменить" textFill="WHITE" />
+                  <Button fx:id="cancelButton" layoutX="14.0" layoutY="319.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="82.0" style="-fx-background-color: #0088D1;" text="Отменить" textFill="WHITE" />
                </children>
             </Group>
             <Group>
                <children>
-                  <Label layoutX="14.0" layoutY="23.0" prefHeight="22.0" prefWidth="83.0" text="Артикул">
+                  <Label layoutX="14.0" layoutY="23.0" prefHeight="22.0" prefWidth="83.0" text="Артикул" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="articleField" layoutX="123.0" layoutY="23.0" prefHeight="22.0" prefWidth="287.0" />
+                  <TextField fx:id="articleField" layoutX="123.0" layoutY="23.0" prefHeight="22.0" prefWidth="287.0">
+                     <effect>
+                        <DropShadow color="#6a396f" />
+                     </effect></TextField>
                </children>
             </Group>
             <Group>
                <children>
-                  <Label layoutX="14.0" layoutY="145.0" prefHeight="22.0" prefWidth="83.0" text="Телефон">
+                  <Label layoutX="14.0" layoutY="145.0" prefHeight="22.0" prefWidth="83.0" text="Телефон" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="phoneField" layoutX="123.0" layoutY="145.0" prefHeight="22.0" prefWidth="287.0" />
+                  <TextField fx:id="phoneField" layoutX="123.0" layoutY="145.0" prefHeight="22.0" prefWidth="287.0">
+                     <effect>
+                        <DropShadow color="#6a396f" />
+                     </effect></TextField>
                </children>
             </Group>
             <Group>
                <children>
-                  <Label layoutX="14.0" layoutY="104.0" prefHeight="22.0" prefWidth="83.0" text="Количество">
+                  <Label layoutX="14.0" layoutY="104.0" prefHeight="22.0" prefWidth="83.0" text="Количество" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="quantyField" layoutX="123.0" layoutY="104.0" prefHeight="22.0" prefWidth="287.0" />
+                  <TextField fx:id="quantyField" layoutX="123.0" layoutY="104.0" prefHeight="22.0" prefWidth="287.0">
+                     <effect>
+                        <DropShadow color="#6a396f" />
+                     </effect></TextField>
                </children>
             </Group>
          </children>

@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="424.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.SearchPanelController">
+<AnchorPane prefHeight="400.0" prefWidth="424.0" style="-fx-background-color: #6EB4F5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.SearchPanelController">
    <children>
-      <Button fx:id="searchButton" layoutX="329.0" layoutY="14.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="73.0" text="Найти" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="15.0" />
+      <Button fx:id="searchButton" layoutX="329.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" style="-fx-background-color: #0088D1;" text="Найти" textFill="WHITE" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="15.0" />
       <TableView fx:id="tableView" layoutX="8.0" layoutY="52.0" prefHeight="342.0" prefWidth="406.0" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
         <columns>
           <TableColumn fx:id="dateCol" editable="false" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" sortable="false" text="Дата" />
@@ -18,9 +20,12 @@
          <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
+         <effect>
+            <DropShadow />
+         </effect>
       </TableView>
       <TextField fx:id="searchField" layoutX="98.0" layoutY="14.0" prefHeight="22.0" prefWidth="216.0" AnchorPane.topAnchor="14.0" />
-      <Label layoutX="25.0" layoutY="15.0" text="Артикул:" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="15.0">
+      <Label layoutX="25.0" layoutY="15.0" text="Артикул:" textFill="WHITE" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="15.0">
          <font>
             <Font size="16.0" />
          </font>

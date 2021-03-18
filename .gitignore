@@ -4,7 +4,7 @@
 .classpath
 .project
 .settings
-
+/out/
 # Package Files #
 *.jar
 *.war

@@ -1,21 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import java.lang.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="424.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.AddPanelController">
+<AnchorPane prefHeight="400.0" prefWidth="424.0" style="-fx-background-color: #6EB4F5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.AddPanelController">
    <children>
       <Group AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
          <children>
             <Group>
                <children>
-                  <TextField fx:id="priceField" focusTraversable="false" layoutX="123.0" layoutY="64.0" prefHeight="22.0" prefWidth="287.0" />
+                  <TextField fx:id="priceField" focusTraversable="false" layoutX="123.0" layoutY="64.0" prefHeight="22.0" prefWidth="287.0">
+                     <effect>
+                        <DropShadow color="#6a396f" />
+                     </effect></TextField>
                   <Label layoutX="14.0" layoutY="64.0" prefHeight="22.0" prefWidth="83.0" text="Цена (0.00)">
                      <font>
                         <Font size="14.0" />
                      </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
                   </Label>
                </children>
             </Group>
@@ -25,14 +39,25 @@
                      <font>
                         <Font size="14.0" />
                      </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
                   </Label>
-                  <TextArea fx:id="descripField" focusTraversable="false" layoutX="123.0" layoutY="189.0" prefHeight="199.0" prefWidth="287.0" />
+                  <TextArea fx:id="descripField" focusTraversable="false" layoutX="123.0" layoutY="189.0" prefHeight="199.0" prefWidth="287.0">
+                     <effect>
+                        <DropShadow color="#6a396f" />
+                     </effect></TextArea>
                </children>
             </Group>
             <Group>
                <children>
-                  <Button fx:id="addButton" focusTraversable="false" layoutX="14.0" layoutY="278.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="67.0" text="Добавить" />
-                  <Button fx:id="cancelButton" focusTraversable="false" layoutX="14.0" layoutY="319.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="67.0" text="Отменить" />
+                  <Button fx:id="addButton" focusTraversable="false" layoutX="14.0" layoutY="278.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: #0088D1;" text="Добавить" textFill="WHITE" />
+                  <Button fx:id="cancelButton" focusTraversable="false" layoutX="14.0" layoutY="319.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" style="-fx-background-color: #0088D1;" text="Отменить" textFill="WHITE" />
                </children>
             </Group>
             <Group>
@@ -41,8 +66,19 @@
                      <font>
                         <Font size="14.0" />
                      </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
                   </Label>
-                  <TextField fx:id="articleField" layoutX="123.0" layoutY="23.0" prefHeight="22.0" prefWidth="287.0" />
+                  <TextField fx:id="articleField" layoutX="123.0" layoutY="23.0" prefHeight="22.0" prefWidth="287.0">
+                     <effect>
+                        <DropShadow color="#6a396f" />
+                     </effect></TextField>
                </children>
             </Group>
             <Group>
@@ -51,8 +87,19 @@
                      <font>
                         <Font size="14.0" />
                      </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
                   </Label>
-                  <TextField fx:id="phoneField" focusTraversable="false" layoutX="123.0" layoutY="145.0" prefHeight="22.0" prefWidth="287.0" />
+                  <TextField fx:id="phoneField" focusTraversable="false" layoutX="123.0" layoutY="145.0" prefHeight="22.0" prefWidth="287.0">
+                     <effect>
+                        <DropShadow color="#6a396f" />
+                     </effect></TextField>
                </children>
             </Group>
             <Group>
@@ -61,8 +108,19 @@
                      <font>
                         <Font size="14.0" />
                      </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
                   </Label>
-                  <TextField fx:id="quantyField" focusTraversable="false" layoutX="123.0" layoutY="104.0" prefHeight="22.0" prefWidth="287.0" />
+                  <TextField fx:id="quantyField" focusTraversable="false" layoutX="123.0" layoutY="104.0" prefHeight="22.0" prefWidth="287.0">
+                     <effect>
+                        <DropShadow color="#6a396f" />
+                     </effect></TextField>
                </children>
             </Group>
          </children>

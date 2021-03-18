@@ -15,15 +15,18 @@ import sample.services.OrderServiceImpl;
 
 public class Main extends Application{
     public static Image icons = new Image(String.valueOf(Main.class.getResource("car.png")));
+    private static final int WIN_WIDTH = 850;
+    private static final int WIN_HEIGHT = 650;
+    private static final String TITLE = "Forsa";
 
     private OrderService orderService = OrderServiceImpl.getService();;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("Forsa");
+        primaryStage.setTitle(TITLE);
         primaryStage.getIcons().add(icons);
-        primaryStage.setScene(new Scene(root, 650, 450));
+        primaryStage.setScene(new Scene(root, WIN_WIDTH, WIN_HEIGHT));
         primaryStage.show();
     }
 
