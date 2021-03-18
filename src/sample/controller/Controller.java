@@ -2,6 +2,7 @@ package sample.controller;
 
 
 
+import javafx.application.Platform;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -25,16 +26,15 @@ import sample.program.UpdateTableView;
 import sample.services.OrderService;
 import sample.services.OrderServiceImpl;
 import sample.util.Date;
-import sample.util.Timer;
 
 import java.io.IOException;
+import java.util.TimerTask;
 
 public class Controller {
 
-    private final long DELAY = 10000;
+    private final long DELAY = 7000;
     private final OrderService orderService = OrderServiceImpl.getService();
     private final ObservableList<Order> list = Data.getData().getList();
-    private final Thread threadTimer = new Thread(new Timer(orderService, DELAY));
     private static Order selectedOrder;
 
 
@@ -263,7 +263,21 @@ public class Controller {
             }
         });
 
-        threadTimer.start();
+        // Обновление таблицы
+        new Thread(()->
+        {
+            while(Main.isRun)
+            {
+                try {
+                    Thread.sleep(DELAY);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                Platform.runLater(() -> {
+                    UpdateTableView.updateData(orderService);
+                });
+            }
+        }).start();
 
     }
 

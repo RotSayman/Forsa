@@ -4,7 +4,6 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import sample.models.Order;
 
-import java.util.Objects;
 
 public class Data
 {
@@ -20,8 +19,11 @@ public class Data
 
     public void removeAll(){
         if(list != null){
-            list.removeIf(Objects::nonNull);
+            synchronized (list){
+                list.clear();
+            }
         }
+
     }
 
     public static Data getData(){

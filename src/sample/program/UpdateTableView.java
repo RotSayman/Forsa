@@ -8,11 +8,14 @@ import sample.services.OrderService;
 import sample.util.Date;
 
 import java.util.List;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class UpdateTableView
 {
-    public synchronized static void updateData(OrderService orderService){
+    public static synchronized void updateData(OrderService orderService){
+
         try {
+
             List<Order> orderList = orderService.showOrdersByDate(Date.newInstance().getDate());
             Data.getData().removeAll();
             Data.getData().getList().addAll(orderList);
@@ -25,5 +28,7 @@ public class UpdateTableView
                 System.exit(1);
             }
         }
+
+
     }
 }
